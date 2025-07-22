@@ -155,15 +155,33 @@ with st.sidebar:
     api_key_input = st.text_input("Enter your Google AI API Key:", type="password", key="api_key")
     st.divider()
     
-    st.header("Select a Financial Persona")
     persona_options = {
-        "Debt-Heavy Low Performer": "7777777777",
-        "SIP Samurai (Disciplined Investor)": "8888888888",
-        "Salary Sinkhole (High Spender)": "1414141414",
-        "Early Retirement Dreamer": "1616161616",
-        "Live-for-Today (High Income, High Spend)": "2525252525",
-        "Starter Saver (New Investor)": "2020202020",
-    }
+    "No Assets (Only Savings Account)": "1111111111",
+    "All Assets (Large MF Portfolio - 9 funds)": "2222222222",
+    "All Assets (Small MF Portfolio - 1 fund)": "3333333333",
+    "All Assets + EPF with 2 UAN + 3 Banks": "4444444444",
+    "All Assets Except Credit Score": "5555555555",
+    "No Bank Accounts (Large MF Portfolio)": "6666666666",
+    "Debt-Heavy Low Performer": "7777777777",
+    "SIP Samurai (Disciplined Investor)": "8888888888",
+    "Fixed Income Fanatic": "9999999999",
+    "Precious Metal Believer": "1010101010",
+    "Dormant EPF Earner": "1212121212",
+    "Salary Sinkhole (High Spender)": "1414141414",
+    "Balanced Growth Tracker": "1313131313",
+    "Starter Saver (New Investor)": "2020202020",
+    "Ghost Portfolio (Inactive User)": "1515151515",
+    "Early Retirement Dreamer": "1616161616",
+    "The Swinger (Short-Term Trader)": "1717171717",
+    "Passive Contributor (No Income)": "1818181818",
+    "Section 80C Strategist (Tax Planner)": "1919191919",
+    "Dual Income Dynamo (Freelancer + Salary)": "2121212121",
+    "Sudden Wealth Receiver": "2222222222",
+    "Overseas Optimizer (NRI)": "2323232323",
+    "Mattress Money Mindset (FD Lover)": "2424242424",
+    "Live-for-Today (High Income, High Spend)": "2525252525"
+}
+
     selected_persona_name = st.selectbox("Choose a user profile to analyze:", options=list(persona_options.keys()))
 
 # --- Main Logic ---
